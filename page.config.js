@@ -20,11 +20,11 @@ module.exports = [
   //   html: 'difference/difference.html',
   //   jsEntry: 'difference/difference.js'
   // },
-  // {
-  //   name: 'freeassessment',
-  //   html: 'freeassessment/freeassessment.html',
-  //   jsEntry: 'freeassessment/freeassessment.js'
-  // },
+  {
+    name: 'freeassessment',
+    html: 'freeassessment/freeassessment.html',
+    jsEntry: 'freeassessment/freeassessment.js'
+  },
   // {
   //   name: 'parents',
   //   html: 'parents/parents.html',
