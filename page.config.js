@@ -40,11 +40,11 @@ module.exports = [
     html: 'teacher/teacher.html',
     jsEntry: 'teacher/teacher.js'
   },
-  // {
-  //   name: 'studentexp',
-  //   html: 'studentexp/studentexp.html',
-  //   jsEntry: 'studentexp/studentexp.js'
-  // },
+  {
+    name: 'studentexp',
+    html: 'studentexp/studentexp.html',
+    jsEntry: 'studentexp/studentexp.js'
+  },
   // {
   //   name: 'methodology',
   //   html: 'methodology/methodology.html',
