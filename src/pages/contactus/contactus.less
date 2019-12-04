@@ -1,3 +1,23 @@
+.lg-layout {
+    li {
+        &:nth-child(1) {
+            background-image: url("../../images/contact_us/contact_us_02.png");
+
+            .lg-bg {
+                height: 673px;
+            }
+        }
+
+        &:nth-child(2) {
+            background-image: url("../../images/contact_us/contact_us_03.png");
+
+            .lg-bg {
+                height: 258px;
+            }
+        }
+    }
+}
+
 .phone {
     position   : absolute;
     left       : .4rem;
@@ -9,6 +29,7 @@
 
 .form {
     box-sizing: border-box;
+    display   : none;
     width     : calc(100% - .8rem);
     position  : absolute;
     top       : -0.186667rem;

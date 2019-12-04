@@ -60,11 +60,11 @@ module.exports = [
     html: 'index/index.html',
     jsEntry: 'index/index.js'
   }
-  // , {
-  //   name: 'contactus',
-  //   html: 'contactus/contactus.html',
-  //   jsEntry: 'contactus/contactus.js'
-  // }
+  , {
+    name: 'contactus',
+    html: 'contactus/contactus.html',
+    jsEntry: 'contactus/contactus.js'
+  }
 
 
 
