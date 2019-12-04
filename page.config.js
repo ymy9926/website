@@ -1,9 +1,9 @@
 /* eslint-disable */
 module.exports = [
   {
-    name: './login.html',
-    html: 'login/login.html',
-    jsEntry: 'login/login.js'
+    name: './signup.html',
+    html: 'signup/signup.html',
+    jsEntry: 'signup/signup.js'
   },
   {
     name: 'rule',
