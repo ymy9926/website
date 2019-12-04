@@ -1,35 +1,101 @@
-.phone-btn {
-  width: 9.2rem;
-  height: 1.173333rem;
-  line-height: 1.173333rem;
-  border-radius: .16rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.learn {
-  bottom: 2.773333rem;
-  border: .026667rem solid #4E4F69;
-  color: #37384C;
-}
-.free {
-  bottom: 1.333333rem;
-  background: #4E4F69 !important;
-  color: white;
-}
-.more {
-  top: 9.28rem;
-}
-.teacher {
-  bottom: 1.066667rem;
-  border: .026667rem solid #4E4F69;
-}
-.signup-now {
-  bottom: .893333rem;
-  left: .8rem;
-  width: 4rem;
-  margin: 0;
-  height: .853333rem;
-  line-height: .853333rem !important;
-  padding: 0 !important;
+.lg-layout {
+  &>li {
+    &:nth-child(1) {
+      background-image: url("../../images/index/index_02.png");
+
+      .lg-bg {
+        height: 708px;
+      }
+    }
+
+    &:nth-child(2) {
+      background-image: url("../../images/index/index_03.png");
+
+      .lg-bg {
+        height: 308px;
+      }
+    }
+
+    &:nth-child(3) {
+      background-image: url("../../images/index/index_04.png");
+
+      .lg-bg {
+        height: 839px;
+
+        .more {
+          top      : auto;
+          left     : 50%;
+          transform: translateX(-100% - 10px);
+          bottom   : 100px;
+          width    : 270px;
+        }
+
+        .class {
+          width    : 270px;
+          right    : 50%;
+          transform: translateX(100% + 10px);
+          bottom   : 100px;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      background-image: url("../../images/index/index_05.png");
+
+      .lg-bg {
+        height: 804px;
+
+        .lg-btn {
+          width: 260px;
+          top  : 430px;
+          left : 160px;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      background-image: url("../../images/index/index_06.png");
+
+      .lg-bg {
+        height: 691px;
+
+        .lg-btn {
+          right : 70px;
+          top   : auto;
+          bottom: 70px;
+          left  : auto;
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      background-image: url("../../images/index/index_07.png");
+
+      .lg-bg {
+        height: 249px;
+        .lg-btn {
+          right : 170px;
+          top   : auto;
+          bottom: 105px;
+          left  : auto;
+        }
+      }
+    }
+
+    &:nth-child(7) {
+      background-image: url("../../images/index/index_08.png");
+
+      .lg-bg {
+        height: 677px;
+      }
+    }
+
+    &:nth-child(8) {
+      background-image: url("../../images/index/index_09.png");
+
+      .lg-bg {
+        height: 572px;
+      }
+    }
+  }
 }

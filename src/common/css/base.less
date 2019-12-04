@@ -230,12 +230,23 @@ em {
             font-weight  : bold;
             padding      : 0 30px;
             font-family  : Rubik-Medium;
-            cursor: pointer;
+            cursor       : pointer;
+
+            &:hover {
+                background: rgba(78, 79, 105, .95);
+                color     : #fff;
+            }
 
             &.lg-btn1 {
                 border     : 2px solid #4E4F69;
                 line-height: 46px;
                 height     : 46px;
+            }
+
+            &.lg-btn2:hover {
+                color     : #fff;
+                background: rgba(78, 79, 105, 1);
+                ;
             }
         }
 

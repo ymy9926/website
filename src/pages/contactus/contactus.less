@@ -1,5 +1,5 @@
 .lg-layout {
-    li {
+    &>li {
         &:nth-child(1) {
             background-image: url("../../images/contact_us/contact_us_02.png");
 
@@ -31,14 +31,14 @@
     box-sizing: border-box;
     width     : 568px;
     position  : absolute;
-    top       : 20px;
-    right     : 0;
+    top       : 100px;
+    right     : 58px;
     background: transparent;
 
 
     li {
         box-sizing   : border-box;
-        margin-bottom: 10px;
+        margin-bottom: 13px;
         height       : 46px;
 
         input {
@@ -47,8 +47,7 @@
             height          : 46px;
             line-height     : 46px;
             padding         : 0 15px;
-            background-color: #76cbc9;
-            opacity         : 0.7;
+            background-color: transparent;
             border-radius   : 10px;
             color           : #fff;
 
@@ -58,19 +57,34 @@
 
         }
 
+        &.lg-from-row {
+            display: flex;
+
+            input {
+                flex      : 1;
+                width     : 50%;
+                background: transparent;
+
+                &:first-child {
+                    margin-right: 15px;
+                }
+
+                &:last-child {
+                    margin-left: 15px;
+                }
+            }
+        }
+
         &:nth-last-child(2) {
-            height     : 218px;
-            padding-top: 10px;
+            height: 218px;
 
             textarea {
-                box-sizing      : border-box;
-                width           : 100%;
-                background      : transparent;
-                border          : none;
-                background-image: url('../../images/contactus/textarea-bg.png');
-                height          : 100%;
-                background-size : 100% 100%;
-                padding         : 10px;
+                box-sizing: border-box;
+                width     : 100%;
+                background: transparent;
+                border    : none;
+                height    : 100%;
+                padding   : 10px;
 
                 &::placeholder {
                     color: #fff;
