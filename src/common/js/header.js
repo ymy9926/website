@@ -7,6 +7,8 @@ import remember from '../../images/header/remmbersel.png'
 import no_remember from '../../images/header/remmber.png'
 import logo from '../../images//header/logo.png'
 import arrow from '../../images/header/arrow.png'
+import hide from '../../images/header/hide_passwprd.png'
+import show from '../../images/header/show_password.png'
 
 
 (function (window) {
@@ -50,7 +52,7 @@ import arrow from '../../images/header/arrow.png'
     <form class="masksign" action="https://dev.pplingo.com/accounts/login/" method="POST" id="login" >
         <p class="sgintitle"><span class="close"><img src="${close}" /></span><span class="font32 logintitle">Login</span><span class="signup" id="form-signup">Sign up</span></p>
         <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
-        <p class="passwordipt"><input type="password" name="password" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
+        <p class="passwordipt"><input type="password" name="password" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="${hide}" alt=""></p>
         <div class="pasword">
             <p>
                 <img class="remember-img" src="${remember}" alt="">
@@ -65,9 +67,9 @@ import arrow from '../../images/header/arrow.png'
     </form>
     <form class="maskregister" action="https://dev.pplingo.com/accounts/login/" method="POST" id="register" >
         <p class="sgintitle"><span class="icon_close"><img src="${close}" /></span><span class="font32 logintitle">Sign up</span><span class="signup" id="form-login">Login</span></p>
-        <p class="username"><input type="text" class="username"  name="username" placeholder="Username"><span class="emailtextnone"></span></p>
+        <p class="username"><input type="text" class="username"  name="username" placeholder="Username"></p>
         <p class="emailipt"><input type="text" class="username"  name="email" placeholder="Email"><span class="emailtextnone"></span></p>
-        <p class="passwordipt"><input type="password" name="password1" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
+        <p class="passwordipt"><input type="password" name="password1" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="${hide}" alt=""></p>
         <div class="login">
             <button type="submit" class="loginbtn">CREATE ACCOUNT</button>
         </div>
@@ -116,6 +118,7 @@ import arrow from '../../images/header/arrow.png'
     layout.parentNode.insertBefore(header, layout)
 
     var isRememberUser = true;
+    var showPassword = false;
 
     function hideMask() {
         document.querySelector(".mask").style.display = 'none';
@@ -139,6 +142,20 @@ import arrow from '../../images/header/arrow.png'
         isRememberUser = !isRememberUser
         isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
     }
+
+    document.querySelectorAll(".paswordnone").forEach(item => {
+        item.onclick = function() {
+            showPassword = !showPassword
+            if (showPassword) {
+                this.setAttribute("src", show)
+                this.previousSibling.setAttribute("type", "text")
+            } else {
+                this.setAttribute("src", hide)
+                this.previousSibling.setAttribute("type", "password")
+            }
+            showPassword ? this.setAttribute("src", show) : this
+        }
+    })
 
     document.querySelector("#show_login").onclick = showLogin;
     document.querySelector("#show_signup").onclick = showRegister;
