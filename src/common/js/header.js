@@ -1,6 +1,7 @@
 /* eslint-disable */
 import '../../common/js/layer_mobile/need/layer.css'
 import '../../common/js/layer_mobile/layer.js'
+import axios from 'axios'
 import close from '../../images/header/close.png'
 import remember from '../../images/header/remmbersel.png'
 import icon_w from '../../images/header/icon_w.png'
@@ -15,7 +16,42 @@ import arrow from '../../images/header/arrow.png'
 
 (function (window) {
 
-  var mask = `<div class="mask">
+    window.submitEmail = function (data, success, faild) {
+        var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+
+        if (data.email != "") {
+            if (reg.test(data.email)) {
+                var http = axios.post('https://member.lingoace.com/api/v2/student/potential_user/', data);
+                http.then(function ({ status, data } = res) {
+                    if (success) { success(data) }
+                    console.log(status, data);
+                }, function (err) {
+                    if (faild) { faild(data) }
+                });
+
+                layer.open({
+                    content: 'Thank you for submitting your enquiry. Our course consultant will revert back to you within 24hours.'
+                    , skin: 'msg'
+                    , time: 3 //2秒后自动关闭
+                });
+
+            }
+            else {
+                layer.open({
+                    content: 'Invalid email. '
+                    , btn: 'OK'
+                });
+            }
+        } else {
+            layer.open({
+                content: 'Invalid email. '
+                , btn: 'OK'
+            });
+        }
+
+    }
+
+    var mask = `<div class="mask">
     <form class="masksign" action="https://dev.pplingo.com/accounts/login/" method="POST" id="login" >
         <p class="sgintitle"><span class="close"><img src="${close}" /></span><span class="font32 logintitle">Login</span><span class="signup" id="form-signup">Sign up</span></p>
         <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
@@ -82,40 +118,40 @@ import arrow from '../../images/header/arrow.png'
     </div>
   </div>`
 
-  var  header = document.createElement('div')
-  header.innerHTML = mask
-  var layout = document.querySelector('.lg-layout')
-  layout.parentNode.insertBefore(header, layout)
+    var header = document.createElement('div')
+    header.innerHTML = mask
+    var layout = document.querySelector('.lg-layout')
+    layout.parentNode.insertBefore(header, layout)
 
-  var isRememberUser = true;
+    var isRememberUser = true;
 
-  function hideMask() {
-      document.querySelector(".mask").style.display = 'none';
-  }
-  
-  function showLogin() {
-      document.querySelector(".mask").style.display = 'block';
-      document.querySelector(".masksign").style.display = 'block'
-      document.querySelector(".maskregister").style.display = 'none'
-      document.querySelector(".close img").onclick = hideMask
-  }
-  
-  function showRegister() {
-      document.querySelector(".mask").style.display = 'block';
-      document.querySelector(".masksign").style.display = 'none'
-      document.querySelector(".maskregister").style.display = 'block'
-      document.querySelector(".icon_close img").onclick = hideMask
-  }
-  
-  document.querySelector('.remember-img').onclick = function() {
-      isRememberUser = !isRememberUser
-      isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
-  }
-  
-  document.querySelector("#show_login").onclick = showLogin;
-  document.querySelector("#show_signup").onclick = showRegister;
-  document.querySelector('#form-signup').onclick = showRegister
-  document.querySelector('#form-login').onclick = showLogin
-  
+    function hideMask() {
+        document.querySelector(".mask").style.display = 'none';
+    }
+
+    function showLogin() {
+        document.querySelector(".mask").style.display = 'block';
+        document.querySelector(".masksign").style.display = 'block'
+        document.querySelector(".maskregister").style.display = 'none'
+        document.querySelector(".close img").onclick = hideMask
+    }
+
+    window.showRegister = function () {
+        document.querySelector(".mask").style.display = 'block';
+        document.querySelector(".masksign").style.display = 'none'
+        document.querySelector(".maskregister").style.display = 'block'
+        document.querySelector(".icon_close img").onclick = hideMask
+    }
+
+    document.querySelector('.remember-img').onclick = function () {
+        isRememberUser = !isRememberUser
+        isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
+    }
+
+    document.querySelector("#show_login").onclick = showLogin;
+    document.querySelector("#show_signup").onclick = showRegister;
+    document.querySelector('#form-signup').onclick = showRegister
+    document.querySelector('#form-login').onclick = showLogin
+
 
 })(window);
