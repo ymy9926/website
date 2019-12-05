@@ -6,6 +6,11 @@ module.exports = [
   //   jsEntry: 'login/login.js'
   // },
   {
+    name: './signup.html',
+    html: 'signup/signup.html',
+    jsEntry: 'signup/signup.js'
+  },
+  {
     name: 'rule',
     html: 'rule/rule.html',
     jsEntry: 'rule/rule.js'

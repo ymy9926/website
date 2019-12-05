@@ -9,7 +9,7 @@ function sign() {
     var email = document.querySelector('#txt_email');
     console.log(email.value);
     submitEmail({email:email});
-    location.href = "/login.html";
+    location.href = "/signup.html";
 }
 
 document.querySelector("#btn_sign").onclick = sign;
