@@ -39,8 +39,8 @@ let webpackConfig = {
   // 配置出口  
   output: {
     path: path.join(__dirname, "./dist/"),
-    filename: './static/js/[name].[hash:7].js',
-    publicPath: './',
+    filename: 'static/js/[name].[hash:7].js',
+    publicPath: '/',
   },
   module: {
     rules: [

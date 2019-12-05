@@ -11,4 +11,4 @@ function sign() {
     location.href = "/login.html";
 }
 
-document.querySelector("#btn-sign").onclick = sign;
+document.querySelector("#btn_sign").onclick = sign;

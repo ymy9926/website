@@ -1,10 +1,10 @@
 /* eslint-disable */
 module.exports = [
-  {
-    name: './login.html',
-    html: 'login/login.html',
-    jsEntry: 'login/login.js'
-  },
+  // {
+  //   name: 'login',
+  //   html: 'login/login.html',
+  //   jsEntry: 'login/login.js'
+  // },
   {
     name: 'rule',
     html: 'rule/rule.html',
@@ -54,7 +54,7 @@ module.exports = [
     name: 'referfriend',
     html: 'referfriend/referfriend.html',
     jsEntry: 'referfriend/referfriend.js'
-  }, 
+  },
   {
     name: 'index',
     html: 'index/index.html',
@@ -65,7 +65,4 @@ module.exports = [
     html: 'contactus/contactus.html',
     jsEntry: 'contactus/contactus.js'
   }
-
-
-
 ]

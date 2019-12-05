@@ -1,8 +1,8 @@
-// @font-face {
-//     font-family: Comfortaa;
-//     src        : url('./fonts/Comfortaa-Regular.ttf');
-//     /* 大标题和人物留言 */
-// }
+@font-face {
+    font-family: Comfortaa;
+    src        : url('./fonts/Comfortaa-Regular.ttf');
+    /* 大标题和人物留言 */
+}
 
 // @font-face {
 //     font-family: Roboto;
@@ -212,7 +212,7 @@ em {
         position           : relative;
 
         .lg-bg {
-            width   : 1280px;
+            width   : 1170px;
             margin  : 0 auto;
             position: relative;
         }
@@ -253,73 +253,99 @@ em {
     }
 }
 
+.trustpilot-widget {
+    width : 1200px;
+    margin: 50px auto;
+
+    iframe {
+        margin: 0 auto;
+    }
+}
+
 footer {
     background: #4e4f69;
-    padding   : .4rem;
+    padding   : 40px;
     color     : #fff;
 
-    .lg-logo {
-        margin-top      : 1.066667rem;
-        width           : 3.2rem;
-        height          : 1.2rem;
-        background-image: url('../../images/footer/icon-logo.png');
-    }
+    .footer-warpper {
+        display: flex;
+        width  : 960px;
+        margin : 0 auto;
 
-    .info {
-        font-size  : .32rem;
-        line-height: .533333rem;
-    }
+        .left {
+            flex: 1;
 
-    .icon-warpper {
-        margin-top: .533333rem;
-        display   : flex;
-
-        li {
-            flex        : 1;
-            margin-right: .266667rem;
-
-            .lg-icon-appstore {
-
-                width           : 3.2rem;
-                height          : 1.066667rem;
-                background-image: url('../../images/footer/footerdownios_03.png');
+            .lg-logo {
+                display         : inline-block;
+                width           : 161px;
+                height          : 61px;
+                background-image: url('../../images/footer/icon-logo.png');
             }
 
-            .lg-icon-kidsafe {
-                width           : 3.2rem;
-                height          : 1.066667rem;
-                background-image: url('../../images/footer/footerdownkid_03.png');
+            .info {
+                font-size  : 14px;
+                line-height: 20px;
+            }
+
+            .copy {
+                padding-top: 12px;
+                text-align : left;
+                font-size  : 12px;
+                color      : rgb(121, 122, 142);
+            }
+        }
+
+        .right {
+            flex        : 0 460px;
+            padding-left: 50px;
+            margin-top  : 20px;
+
+            .icon-warpper {
+                display     : block;
+                padding-left: 20px;
+
+                li {
+                    display      : inline-block;
+                    padding-right: 20px;
+
+                    i {
+                        display: inline-block;
+                        width  : 90px;
+                        height : 30px;
+                    }
+
+                    .lg-icon-appstore {
+                        background-image: url('../../images/footer/footerdownios_03.png');
+                    }
+
+                    .lg-icon-kidsafe {
+                        background-image: url('../../images/footer/footerdownkid_03.png');
+                    }
+                }
+            }
+
+            .footer-menus {
+                margin     : 16px;
+                line-height: 20px;
+
+                li {
+                    display     : inline-block;
+                    margin-right: 20px;
+                    border-left : 2px solid #fff;
+                    padding-left: 10px;
+                    line-height : 18px;
+
+                    &>a {
+                        color    : #fff;
+                        font-size: 16px;
+                    }
+                }
+
             }
         }
     }
 
-    .footer-menus {
-        margin     : 0 .533333rem;
-        line-height: 1.333333rem;
 
-        li>a {
-            color    : #fff;
-            font-size: .426667rem;
-
-            i {
-                font-size          : 0;
-                width              : 0;
-                height             : 0;
-                border             : .213333rem solid #fff;
-                border-top-color   : transparent;
-                border-bottom-color: transparent;
-                border-right-color : transparent;
-                vertical-align     : middle;
-            }
-        }
-    }
-
-    .copy {
-        text-align   : center;
-        margin-bottom: 1.333333rem;
-        font-size    : .346667rem;
-        color        : rgb(124, 125, 135);
-    }
 
 }
 

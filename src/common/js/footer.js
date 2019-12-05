@@ -17,5 +17,34 @@
     script.src = "//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js";
     document.body.appendChild(script);
 
+    var footerHtml = `
+    <div class="footer-warpper">
+    <div class="left">
+    <i class="lg-logo"></i>
+    <p class="info">
+      LingoAce is the premiere provider of online Chinese classes for students aged 6-15. Our mission is to help
+      make the world a better place through the joy of language learning.
+    </p>
+    <p class="copy">Copyright © 2019 LingoAce</p>
+  </div>
+  <div class="right">
+    <ul class="footer-menus">
+      <li><a href="./contactus.html">Contact Us</a></li>
+      <li><a href="./rule.html">Terms & Conditions</a></li>
+    </ul>
+    <ul class="icon-warpper">
+      <li>
+        <a href=""><i class="lg-icon lg-icon-appstore"></i></a>
+      </li>
+      <li>
+        <a href=""><i class="lg-icon lg-icon-kidsafe"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>`;
+
+    var footerEle = document.createElement("footer");
+    footerEle.innerHTML = footerHtml;
+    document.body.appendChild(footerEle);
 
 })();
