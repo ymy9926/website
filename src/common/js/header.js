@@ -84,7 +84,7 @@ import arrow from '../../images/header/arrow.png'
                 <li><span>|</span></li>
                 <li><a href="javascript:void(0)" class="login" id="show_login">Login</a></li>
                 <li><span>|</span></li>
-                <li><a href="" class="login">International Edition</a></li>
+                <li><a href="https://www.lingoace.com" class="login">International Edition</a></li>
                 </ul>
         </div>
         <div class="bottom_bar">
