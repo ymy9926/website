@@ -5,14 +5,10 @@ import axios from 'axios'
 import close from '../../images/header/close.png'
 import remember from '../../images/header/remmbersel.png'
 import no_remember from '../../images/header/remmber.png'
-import icon_w from '../../images/header/icon_w.png'
-import icon_facebook from '../../images/header/icon_facebook.png'
-import icon_ig from '../../images/header/icon_ig.png'
-import icon_twitter from '../../images/header/icon_twitter.png'
-import icon_bell from '../../images/header/icon_bell.png'
-import icon_youtube from '../../images/header/icon_youtube.png'
 import logo from '../../images//header/logo.png'
 import arrow from '../../images/header/arrow.png'
+import hide from '../../images/header/hide_passwprd.png'
+import show from '../../images/header/show_password.png'
 
 
 (function (window) {
@@ -53,27 +49,27 @@ import arrow from '../../images/header/arrow.png'
     }
 
     var mask = `<div class="mask">
-    <form class="masksign" action="https://dev.pplingo.com/accounts/login/" method="POST" id="login" >
+    <form class="masksign" action="https://member.pplingo.com/accounts/login/" method="POST" id="login" >
         <p class="sgintitle"><span class="close"><img src="${close}" /></span><span class="font32 logintitle">Login</span><span class="signup" id="form-signup">Sign up</span></p>
         <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
-        <p class="passwordipt"><input type="password" name="password" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
+        <p class="passwordipt"><input type="password" name="password" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="${hide}" alt=""></p>
         <div class="pasword">
             <p>
                 <img class="remember-img" src="${remember}" alt="">
                 <span id="remember">Remember me</span>
             </p>
                 
-            <p class="forgotpassword"><a href="https://dev.pplingo.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
+            <p class="forgotpassword"><a href="https://member.pplingo.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
         </div>
         <div class="login">
             <button type="submit" class="loginbtn form-loginbtn">Login</button>
         </div>
     </form>
-    <form class="maskregister" action="https://dev.pplingo.com/accounts/login/" method="POST" id="register" >
+    <form class="maskregister" action="https://member.pplingo.com/accounts/login/" method="POST" id="register" >
         <p class="sgintitle"><span class="icon_close"><img src="${close}" /></span><span class="font32 logintitle">Sign up</span><span class="signup" id="form-login">Login</span></p>
-        <p class="username"><input type="text" class="username"  name="username" placeholder="Username"><span class="emailtextnone"></span></p>
+        <p class="username"><input type="text" class="username"  name="username" placeholder="Username"></p>
         <p class="emailipt"><input type="text" class="username"  name="email" placeholder="Email"><span class="emailtextnone"></span></p>
-        <p class="passwordipt"><input type="password" name="password1" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="" alt=""></p>
+        <p class="passwordipt"><input type="password" name="password1" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="${hide}" alt=""></p>
         <div class="login">
             <button type="submit" class="loginbtn">CREATE ACCOUNT</button>
         </div>
@@ -88,15 +84,10 @@ import arrow from '../../images/header/arrow.png'
             <ul>
                 <li><a href="./referfriend.html" class="refer">Refer A Friend</a></li>
                 <li><span>|</span></li>
-                <li><span class="login" id="show_login">Login</span></li>
+                <li><a href="javascript:void(0)" class="login" id="show_login">Login</a></li>
                 <li><span>|</span></li>
-                <li><img src="${icon_w}" alt=""></li>
-                <li><img src="${icon_facebook}" alt=""></li>
-                <li><img src="${icon_ig}" alt=""></li>
-                <li><img src="${icon_twitter}" alt=""></li>
-                <li><img src="${icon_bell}" alt=""></li>
-                <li><img src="${icon_youtube}" alt=""></li>
-            </ul>
+                <li><a href="https://www.lingoace.com?from=sg" class="login">International Edition</a></li>
+                </ul>
         </div>
         <div class="bottom_bar">
             <a href="./index.html">
@@ -105,7 +96,7 @@ import arrow from '../../images/header/arrow.png'
             <ul class="menu_ul font16">
                 <li><a href="./freeassessment.html">Free Chinese Assessment</a></li>
                 <li class="learn">
-                    <a href="javascript;;">Learn Chinese</a>   
+                    <a href="javascript:void(0)">Learn Chinese</a>   
                     <img src="${arrow}" alt="">
                     <div class="select font16">
                         <div><a href="./methodology.html">The LingoAce Methodology</a></div>
@@ -127,6 +118,7 @@ import arrow from '../../images/header/arrow.png'
     layout.parentNode.insertBefore(header, layout)
 
     var isRememberUser = true;
+    var showPassword = false;
 
     function hideMask() {
         document.querySelector(".mask").style.display = 'none';
@@ -150,6 +142,20 @@ import arrow from '../../images/header/arrow.png'
         isRememberUser = !isRememberUser
         isRememberUser ? this.setAttribute("src", remember) : this.setAttribute("src", no_remember)
     }
+
+    document.querySelectorAll(".paswordnone").forEach(item => {
+        item.onclick = function() {
+            showPassword = !showPassword
+            if (showPassword) {
+                this.setAttribute("src", show)
+                this.previousSibling.setAttribute("type", "text")
+            } else {
+                this.setAttribute("src", hide)
+                this.previousSibling.setAttribute("type", "password")
+            }
+            showPassword ? this.setAttribute("src", show) : this
+        }
+    })
 
     document.querySelector("#show_login").onclick = showLogin;
     document.querySelector("#show_signup").onclick = showRegister;
