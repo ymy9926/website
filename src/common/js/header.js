@@ -4,6 +4,7 @@ import '../../common/js/layer_mobile/layer.js'
 import axios from 'axios'
 import close from '../../images/header/close.png'
 import remember from '../../images/header/remmbersel.png'
+import no_remember from '../../images/header/remmber.png'
 import icon_w from '../../images/header/icon_w.png'
 import icon_facebook from '../../images/header/icon_facebook.png'
 import icon_ig from '../../images/header/icon_ig.png'
@@ -98,7 +99,9 @@ import arrow from '../../images/header/arrow.png'
             </ul>
         </div>
         <div class="bottom_bar">
-            <a href='./index.html'><img src="${logo}" alt=""></a>
+            <a href="./index.html">
+                <img src="${logo}" alt="">
+            </a>
             <ul class="menu_ul font16">
                 <li><a href="./freeassessment.html">Free Chinese Assessment</a></li>
                 <li class="learn">
