@@ -65,7 +65,4 @@ module.exports = [
     html: 'contactus/contactus.html',
     jsEntry: 'contactus/contactus.js'
   }
-
-
-
 ]

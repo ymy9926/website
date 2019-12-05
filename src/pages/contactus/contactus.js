@@ -23,7 +23,7 @@ import '../../common/js/footer'
     function sign() {
         var email = document.querySelector('#txt_email');
         submitEmail({ email: email });
-        //location.href = "/login.html";
+        //location.href = "/signup.html";
     }
 
     document.querySelector("#btn_submit").onclick = submit;
