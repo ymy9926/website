@@ -62,7 +62,7 @@ import arrow from '../../images/header/arrow.png'
             </ul>
         </div>
         <div class="bottom_bar">
-            <img src="${logo}" alt="">
+            <a href='./index.html'><img src="${logo}" alt=""></a>
             <ul class="menu_ul font16">
                 <li><a href="./freeassessment.html">Free Chinese Assessment</a></li>
                 <li class="learn">
@@ -70,7 +70,7 @@ import arrow from '../../images/header/arrow.png'
                     <img src="${arrow}" alt="">
                     <div class="select font16">
                         <div><a href="./methodology.html">The LingoAce Methodology</a></div>
-                        <div><a href="">The Student Experience</a></div>
+                        <div><a href="./studentexp.html">The Student Experience</a></div>
                         <div><a href="./teacher.html">LingoAce Teachers</a></div>
                     </div>
                 </li>
