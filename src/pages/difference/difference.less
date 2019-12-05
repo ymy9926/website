@@ -1,4 +1,81 @@
-.lg-btn {
-    bottom: 100px;
-    right : 100px;
+.lg-layout {
+    &>li {
+        &:nth-child(1) {
+            background-image: url("../../images/difference/difference_02.png");
+
+            .lg-bg {
+                height: 522px;
+            }
+        }
+
+        &:nth-child(2) {
+            background-image: url("../../images/difference/difference_03.png");
+
+            .lg-bg {
+                height: 925px;
+            }
+        }
+
+        &:nth-child(3) {
+            background-image: url("../../images/difference/difference_04.png");
+
+            .lg-bg {
+                height: 231px;
+            }
+        }
+
+        &:nth-child(4) {
+            background-image: url("../../images/methodology/methodology_07.png");
+
+            .lg-bg {
+                height: 678px;
+            }
+        }
+
+        &:nth-child(5) {
+            background-image: url("../../images/difference/difference_06.png");
+
+            .lg-bg {
+                height: 540px;
+            }
+        }
+    }
+}
+
+.register {
+
+    left     : 50%;
+    transform: translateX(-50%);
+    bottom   : 50px;
+    z-index  : 100;
+}
+
+.lg-btn1 {
+    left   : 100px !important;
+    bottom : 447px !important;
+    z-index: 100;
+}
+
+.sign {
+    box-sizing: border-box;
+
+    input {
+        width     : 369px;
+        left      : auto;
+        right     : 50px !important;
+        bottom    : 200px !important;
+        background: #71739E;
+        color     : #37384C;
+
+        &::-webkit-input-placeholder {
+            color: #37384C !important;
+        }
+    }
+
+
+    #btn-sign {
+        left  : auto;
+        right : 248px !important;
+        bottom: 134px !important;
+    }
 }

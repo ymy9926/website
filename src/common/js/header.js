@@ -5,12 +5,6 @@ import axios from 'axios'
 import close from '../../images/header/close.png'
 import remember from '../../images/header/remmbersel.png'
 import no_remember from '../../images/header/remmber.png'
-import icon_w from '../../images/header/icon_w.png'
-import icon_facebook from '../../images/header/icon_facebook.png'
-import icon_ig from '../../images/header/icon_ig.png'
-import icon_twitter from '../../images/header/icon_twitter.png'
-import icon_bell from '../../images/header/icon_bell.png'
-import icon_youtube from '../../images/header/icon_youtube.png'
 import logo from '../../images//header/logo.png'
 import arrow from '../../images/header/arrow.png'
 
@@ -88,15 +82,10 @@ import arrow from '../../images/header/arrow.png'
             <ul>
                 <li><a href="./referfriend.html" class="refer">Refer A Friend</a></li>
                 <li><span>|</span></li>
-                <li><span class="login" id="show_login">Login</span></li>
+                <li><a href="javascript:void(0)" class="login" id="show_login">Login</a></li>
                 <li><span>|</span></li>
-                <li><img src="${icon_w}" alt=""></li>
-                <li><img src="${icon_facebook}" alt=""></li>
-                <li><img src="${icon_ig}" alt=""></li>
-                <li><img src="${icon_twitter}" alt=""></li>
-                <li><img src="${icon_bell}" alt=""></li>
-                <li><img src="${icon_youtube}" alt=""></li>
-            </ul>
+                <li><a href="" class="login">International Edition</a></li>
+                </ul>
         </div>
         <div class="bottom_bar">
             <a href="./index.html">
@@ -105,7 +94,7 @@ import arrow from '../../images/header/arrow.png'
             <ul class="menu_ul font16">
                 <li><a href="./freeassessment.html">Free Chinese Assessment</a></li>
                 <li class="learn">
-                    <a href="javascript;;">Learn Chinese</a>   
+                    <a href="javascript:void(0)">Learn Chinese</a>   
                     <img src="${arrow}" alt="">
                     <div class="select font16">
                         <div><a href="./methodology.html">The LingoAce Methodology</a></div>
