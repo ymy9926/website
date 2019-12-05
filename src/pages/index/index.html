@@ -6,6 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>LingAce</title>
+  <script>
+    var __urlparams = location.search.replace('?', '');
+    var __lgzy = window.localStorage.__lgzy__xjp__;
+    if (__urlparams) {
+      var _isWwww = false;
+      var params = __urlparams.split('&');
+      params.forEach((obj) => {
+        if (obj == 'form=www') {
+          _isWwww = true;
+        }
+      });
+      if (_isWwww) {
+        window.localStorage.__lgzy__xjp__ = "";
+      }
+    } else if (__lgzy == 'www') {
+      location.href = "http://wwww.lingoace.com?form=sg";
+    }
+  </script>
 </head>
 
 <body>
@@ -22,8 +40,8 @@
           <p>
             Singapore program based on learning strategies and a strong understanding of the MOE syllabus
           </p>
-          <button class="lg-btn">Singapore Local Schools</button>
-          <button class="lg-btn">International School and Curriculum</button>
+          <button class="lg-btn" id="btn_sg">Singapore Local Schools</button>
+          <button class="lg-btn" id="btn_www">International School and Curriculum</button>
         </div>
       </div>
     </li>
