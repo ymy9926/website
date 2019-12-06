@@ -13,6 +13,14 @@
 
             .lg-bg {
                 height: 966px;
+
+                .register {
+
+                    left     : 50%;
+                    transform: translateX(-50%);
+                    bottom   : 50px;
+                    z-index  : 100;
+                }
             }
         }
 
@@ -21,61 +29,39 @@
 
             .lg-bg {
                 height: 874px;
+
+                .lg-btn1 {
+                    left   : 100px !important;
+                    bottom : 447px !important;
+                    z-index: 100;
+                }
+
+
+            }
+
+            &.sign {
+                box-sizing: border-box;
+
+                input {
+                    width     : 369px;
+                    left      : auto;
+                    right     : 50px !important;
+                    bottom    : 200px !important;
+                    background: #71739E;
+                    color     : #37384C;
+
+                    &::-webkit-input-placeholder {
+                        color: #37384C !important;
+                    }
+                }
+
+
+                #btn_sign {
+                    left  : auto;
+                    right : 238px !important;
+                    bottom: 134px !important;
+                }
             }
         }
-
-        &:nth-child(4) {
-            background-image: url("../../images/freeAssessment/freeAssessment_05.png");
-
-            .lg-bg {
-                height: 546px;
-            }
-        }
-
-        &:nth-child(5) {
-            background-image: url("../../images/freeAssessment/freeAssessment_06.png");
-
-            .lg-bg {
-                height: 767px;
-            }
-        }
-    }
-}
-
-.register {
-
-    left     : 50%;
-    transform: translateX(-50%);
-    bottom   : 50px;
-    z-index  : 100;
-}
-
-.lg-btn1 {
-    left   : 100px !important;
-    bottom : 447px !important;
-    z-index: 100;
-}
-
-.sign {
-    box-sizing: border-box;
-
-    input {
-        width     : 369px;
-        left      : auto;
-        right     : 50px !important;
-        bottom    : 200px !important;
-        background: #71739E;
-        color     : #37384C;
-
-        &::-webkit-input-placeholder {
-            color: #37384C !important;
-        }
-    }
-
-
-    #btn_sign {
-        left  : auto;
-        right : 238px !important;
-        bottom: 134px !important;
     }
 }

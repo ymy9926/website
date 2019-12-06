@@ -49,7 +49,7 @@ import show from '../../images/header/show_password.png'
     }
 
     var mask = `<div class="mask">
-    <form class="masksign" action="https://member.pplingo.com/accounts/login/" method="POST" id="login" >
+    <form class="masksign" action="https://member.lingoace.com/accounts/login/" method="POST" id="login" >
         <p class="sgintitle"><span class="close"><img src="${close}" /></span><span class="font32 logintitle">Login</span><span class="signup" id="form-signup">Sign up</span></p>
         <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
         <p class="passwordipt"><input type="password" name="password" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="${hide}" alt=""></p>
@@ -59,13 +59,13 @@ import show from '../../images/header/show_password.png'
                 <span id="remember">Remember me</span>
             </p>
                 
-            <p class="forgotpassword"><a href="https://member.pplingo.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
+            <p class="forgotpassword"><a href="https://member.lingoace.com/accounts/password/reset/" target="_blank">Forgot Password?</a></p>
         </div>
         <div class="login">
             <button type="submit" class="loginbtn form-loginbtn">Login</button>
         </div>
     </form>
-    <form class="maskregister" action="https://member.pplingo.com/accounts/login/" method="POST" id="register" >
+    <form class="maskregister" action="https://member.lingoace.com/accounts/login/" method="POST" id="register" >
         <p class="sgintitle"><span class="icon_close"><img src="${close}" /></span><span class="font32 logintitle">Sign up</span><span class="signup" id="form-login">Login</span></p>
         <p class="username"><input type="text" class="username"  name="username" placeholder="Username"></p>
         <p class="emailipt"><input type="text" class="username"  name="email" placeholder="Email"><span class="emailtextnone"></span></p>

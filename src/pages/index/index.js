@@ -11,7 +11,14 @@ if (__lgzy == "sg") {
 }
 
 document.querySelector('video').poster = imageUrl;
-document.querySelector('video source,video').src = videoUrl;
+document.querySelector('#bgvid').src = videoUrl;
+document.querySelector('#bgvid source').src = videoUrl;
+// document.querySelector('video').oncanplaythrough = function () {
+//     console.log('loading over');
+//     //document.querySelector('#bgvid').style.display = 'block';
+//     document.querySelector('#video-bg').style.visibility = 'hidden';
+// }
+
 
 document.querySelector("#btn_sg").onclick = function () {
     window.localStorage.__lgzy__xjp__ = "sg";
@@ -20,5 +27,5 @@ document.querySelector("#btn_sg").onclick = function () {
 
 document.querySelector("#btn_www").onclick = function () {
     window.localStorage.__lgzy__xjp__ = "www";
-    location.href = "http://wwww.lingoace.com?form=sg";
+    location.href = "http://www.lingoace.com?from=sg";
 }

@@ -16,15 +16,22 @@ import '../../common/js/footer'
             "phone": form.phone.value,
             "title": form.title.value
         }
-        submitEmail(param);
+        submitEmail(param, function () {
+            setTimeout(function () {
+                location.href = "/signup.html";
+            }, 200);
+        });
     }
 
     function sign() {
         var email = document.querySelector('#txt_email');
-        submitEmail({ email: email });
-        //location.href = "/signup.html";
+        submitEmail({ email: email }, function () {
+            setTimeout(function () {
+                location.href = "/signup.html";
+            }, 200);
+        });
     }
 
     document.querySelector("#btn_submit").onclick = submit;
-    document.querySelector("#btn-sign").onclick = sign;
+    document.querySelector("#btn_sign").onclick = sign;
 })();

@@ -8,6 +8,7 @@
     </div>`;
 
     var trustpilotEle = document.createElement('div');
+
     trustpilotEle.attributes['class'] = 'trustpilot';
     trustpilotEle.innerHTML = trustpilot;
     document.body.appendChild(trustpilotEle);
@@ -34,10 +35,10 @@
     </ul>
     <ul class="icon-warpper">
       <li>
-        <a href=""><i class="lg-icon lg-icon-appstore"></i></a>
+        <a href="https://apps.apple.com/cn/app/lingoace/id1155911183"><i class="lg-icon lg-icon-appstore"></i></a>
       </li>
       <li>
-        <a href=""><i class="lg-icon lg-icon-kidsafe"></i></a>
+        <a href="http://www.kidsafeseal.com/certifiedproducts/lingoace.html"><i class="lg-icon lg-icon-kidsafe"></i></a>
       </li>
     </ul>
   </div>

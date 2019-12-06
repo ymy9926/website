@@ -13,7 +13,7 @@
       var _isWwww = false;
       var params = __urlparams.split('&');
       params.forEach((obj) => {
-        if (obj == 'form=www') {
+        if (obj == 'from=www') {
           _isWwww = true;
         }
       });
@@ -21,8 +21,15 @@
         window.localStorage.__lgzy__xjp__ = "";
       }
     } else if (__lgzy == 'www') {
-      location.href = "http://wwww.lingoace.com?form=sg";
+      location.href = "http://wwww.lingoace.com?from=sg";
     }
+
+    var u = navigator.userAgent;
+    var isMobile = !!u.match(/AppleWebKit.*Mobile.*/);
+    if (isMobile) {
+      location.pathname = "/mobile";
+    }
+
   </script>
 </head>
 
@@ -35,6 +42,7 @@
             <source src="" type="video/mp4">
           </video>
         </div>
+        
         <div class="form-warpper">
           <h1>Excel In Mandarin: The Fun and Effective Way</h1>
           <p>
