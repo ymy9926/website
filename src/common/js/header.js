@@ -74,7 +74,7 @@ import show from '../../images/header/show_password.png'
             <button type="submit" class="loginbtn">CREATE ACCOUNT</button>
         </div>
         <div class="gotomethod">
-            <span class="text">By Signing up,you hereby agree to</span><span class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</span><span> and </span><span class="jump Lawsandregulations">Privacy Policy</span>
+            <span class="text">By Signing up,you hereby agree to</span><a href='./rule.html' class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</a><span> and </span><a href='./rule.html#privacy' class="jump Lawsandregulations">Privacy Policy</a>
         </div>
     </form>
   </div>
@@ -125,17 +125,26 @@ import show from '../../images/header/show_password.png'
     }
 
     function showLogin() {
-        document.querySelector(".mask").style.display = 'block';
-        document.querySelector(".masksign").style.display = 'block'
-        document.querySelector(".maskregister").style.display = 'none'
-        document.querySelector(".close img").onclick = hideMask
+        if (location.pathname == '/signup.html') {
+            document.querySelector(".mask").style.display = 'block';
+            document.querySelector(".masksign").style.display = 'block'
+            document.querySelector(".maskregister").style.display = 'none'
+            document.querySelector(".close img").onclick = hideMask
+        }
+        else {
+            location.href = './signup.html';
+        }
     }
 
     window.showRegister = function () {
-        document.querySelector(".mask").style.display = 'block';
-        document.querySelector(".masksign").style.display = 'none'
-        document.querySelector(".maskregister").style.display = 'block'
-        document.querySelector(".icon_close img").onclick = hideMask
+        if (location.pathname == '/signup.html') {
+            document.querySelector(".mask").style.display = 'block';
+            document.querySelector(".masksign").style.display = 'none'
+            document.querySelector(".maskregister").style.display = 'block'
+            document.querySelector(".icon_close img").onclick = hideMask
+        } else {
+            location.href = './signup.html';
+        }
     }
 
     document.querySelector('.remember-img').onclick = function () {
@@ -144,7 +153,7 @@ import show from '../../images/header/show_password.png'
     }
 
     document.querySelectorAll(".paswordnone").forEach(item => {
-        item.onclick = function() {
+        item.onclick = function () {
             showPassword = !showPassword
             if (showPassword) {
                 this.setAttribute("src", show)
