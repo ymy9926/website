@@ -86,7 +86,13 @@ import show from '../../images/header/show_password.png'
                 <li><span>|</span></li>
                 <li><a href="javascript:void(0)" class="login" id="show_login">Login</a></li>
                 <li><span>|</span></li>
-                <li><a href="https://www.lingoace.com?from=sg" class="login">International Edition</a></li>
+                <li><dl class="choose-lang">
+                <dt><i></i>Singapore - ENG</dt>
+                <dd>
+                <div onclick="location.href='https://www.lingoace.com?from=sg'">International - ENG</div>
+                <div>Singapore - ENG</div>
+                </dd>
+            </dl></li>
                 </ul>
         </div>
         <div class="bottom_bar">

@@ -686,3 +686,53 @@ footer {
         bottom    : 73px;
     }
 }
+
+.choose-lang {
+    width    : 160px;
+    position : relative;
+    color    : #cccccc;
+    cursor   : pointer;
+    font-size: 14px;
+}
+
+.choose-lang:hover dd {
+    display: block;
+}
+
+.choose-lang dt {
+    height     : 20px;
+    line-height: 20px;
+}
+
+.choose-lang dt i {
+    vertical-align     : top;
+    margin-right       : 5px;
+    display            : inline-block;
+    width              : 15px;
+    height             : 20px;
+    background-image   : url('../../images/header/icon-local-no@2x.png');
+    background-position: center;
+    background-size    : 100%;
+    background-repeat  : no-repeat;
+}
+
+.choose-lang dd {
+    position  : absolute;
+    background: #fff;
+    z-index   : 100;
+    left      : 0;
+    top       : 20px;
+    display   : none;
+}
+
+.choose-lang dd div {
+    width      : 120px;
+    height     : 40px;
+    line-height: 40px;
+    padding    : 0 20px;
+}
+
+.choose-lang dd div:hover {
+    background: #75BCCB;
+    color     : #fff;
+}
