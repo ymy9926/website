@@ -65,7 +65,7 @@ import show from '../../images/header/show_password.png'
             <button type="submit" class="loginbtn form-loginbtn">Login</button>
         </div>
     </form>
-    <form class="maskregister" action="https://member.lingoace.com/accounts/login/" method="POST" id="register" >
+    <form class="maskregister" action="https://member.lingoace.com/accounts/signup/" method="POST" id="register" >
         <p class="sgintitle"><span class="icon_close"><img src="${close}" /></span><span class="font32 logintitle">Sign up</span><span class="signup" id="form-login">Login</span></p>
         <p class="username"><input type="text" class="username"  name="username" placeholder="Username"></p>
         <p class="emailipt"><input type="text" class="username"  name="email" placeholder="Email"><span class="emailtextnone"></span></p>
