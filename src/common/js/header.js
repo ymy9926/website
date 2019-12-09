@@ -52,7 +52,7 @@ import show from '../../images/header/show_password.png'
     <form class="masksign" action="https://member.lingoace.com/accounts/login/" method="POST" id="login" >
         <p class="sgintitle"><span class="close"><img src="${close}" /></span><span class="font32 logintitle">Login</span><span class="signup" id="form-signup">Sign up</span></p>
         <p class="emailipt"><input type="text" class="username"  name="login" placeholder="Username"><span class="emailtextnone"></span></p>
-        <p class="passwordipt"><input type="password" name="password" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="${hide}" alt=""></p>
+        <p class="passwordipt"><input type="password" name="password" class="passwordlogin" placeholder="Password"><img class="paswordnone" src="${hide}" alt=""></p>
         <div class="pasword">
             <p>
                 <img class="remember-img" src="${remember}" alt="">
@@ -67,11 +67,12 @@ import show from '../../images/header/show_password.png'
     </form>
     <form class="maskregister" action="https://member.lingoace.com/accounts/signup/" method="POST" id="register" >
         <p class="sgintitle"><span class="icon_close"><img src="${close}" /></span><span class="font32 logintitle">Sign up</span><span class="signup" id="form-login">Login</span></p>
-        <p class="username"><input type="text" class="username"  name="username" placeholder="Username"></p>
-        <p class="emailipt"><input type="text" class="username"  name="email" placeholder="Email"><span class="emailtextnone"></span></p>
+        <p class="username"><input type="text" class="username-register"  name="username" placeholder="Username"></p>
+        <p class="emailipt"><input type="text" class="email-register"  name="email" placeholder="Email"><span class="emailtextnone"></span></p>
         <p class="passwordipt"><input type="password" name="password1" class="passwordinput passwordlogin" placeholder="Password"><img class="paswordnone" src="${hide}" alt=""></p>
+        <input type="hidden" name="password2" class="password2" />
         <div class="login">
-            <button type="submit" class="loginbtn">CREATE ACCOUNT</button>
+            <span type="submit" class="loginbtn" id="create-account">CREATE ACCOUNT</span>
         </div>
         <div class="gotomethod">
             <span class="text">By Signing up,you hereby agree to</span><a href='./rule.html' class="jump Lawsandregulations"> LingoAce Course Agreement /Terms of Use</a><span> and </span><a href='./rule.html#privacy' class="jump Lawsandregulations">Privacy Policy</a>
@@ -171,6 +172,18 @@ import show from '../../images/header/show_password.png'
             showPassword ? this.setAttribute("src", show) : this
         }
     })
+
+    document.querySelector("#create-account").onclick = function () {
+        
+        if(document.querySelector('.username-register').value&&document.querySelector('.email-register').value&&document.querySelector('.passwordinput').value){
+            document.querySelector('.password2').value = document.querySelector('.passwordinput').value;
+            document.querySelector('#register').submit();
+            // document.qieruSelector('.masklogin').style.display="none";
+        }
+        else{
+            alert('Please fill in the information')
+        }
+    }
 
     document.querySelector("#show_login").onclick = showLogin;
     document.querySelector("#show_signup").onclick = showRegister;
